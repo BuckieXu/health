@@ -1,0 +1,9 @@
+<view class="squareContainer">
+  <!-- 下方歌单 -->
+  <view class="displayMusic">
+    <view class="playlistItem" wx:for="{{playlists}}" wx:key="index" bindtap="goPlaylist" data-id="{{item.id}}">
+      <image src="{{item.coverImgUrl}}" class="Itemimg"></image>
+      <view class="singlename">{{item.name}}</view>
+    </view>
+  </view>
+</view>

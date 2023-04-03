@@ -1,0 +1,9 @@
+<view>
+    <view bindtap="goReference">
+        去接种参考
+    </view>
+    <view bindtap="goPlan">
+        去接种规划
+    </view>
+
+</view>

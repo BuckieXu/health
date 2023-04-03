@@ -1,0 +1,38 @@
+<view class="DietDetailContainer">
+    <view class="DietDetailImgBox">
+        <image wx:if="{{dietDataList.displaysrc}}" class="DietDetailImg" src="{{dietDataList.displaysrc}}" mode="" />
+        <image  wx:else="" src="/static/images/test.jpg" mode=""  class="DietDetailImg"/>
+    </view>
+    <view class="DietDetailContent">
+        <view class="FirstBox">
+            <view class="dietName">{{dietDataList.dietName}}</view>
+            <view class="describe">
+                <view class="describetitle">菜品描述</view>
+                <view class="describemsg">{{dietDataList.describe}}</view>
+            </view>
+        </view>
+        <view class="tags">
+            <view class="tagstitle">
+                分类标签
+            </view>
+            <view class="tagslist">
+                <view class="tag" wx:for="{{tags}}" wx:key="index">{{item}}</view>
+            </view>
+        </view>
+        <!-- 食材信息 -->
+        <view class="foodMaterical">
+        <view class="Materical">
+            准备食材
+        </view>
+            <view class="MatericalItem" wx:for="{{foodMaterial}}" wx:key="index">{{item}}</view>
+        </view>
+        <view class="steps">
+            <view class="stepstitle">
+                制作步骤
+            </view>
+            <text user-select="true">{{dietDataList.process}}</text>
+        </view>
+
+    </view>
+
+</view>

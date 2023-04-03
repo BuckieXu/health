@@ -1,0 +1,102 @@
+.page-feel {
+    width: 100%;
+    background-color: #F9F9F9;
+
+    .navbar {
+        padding-top: 20rpx;
+        width: 100%;
+        height: 100rpx;
+        background-color: #07C160;
+        display: flex;
+        justify-content: space-between;
+
+        .bartext {
+            text-align: center;
+            color: #fff;
+            width: 20%;
+            line-height: 100rpx;
+            font-size: 26rpx;
+            margin-top: 12rpx;
+        }
+
+        .closebtn {
+            width: 20%;
+            color: #fff;
+            font-size: 48rpx;
+            margin-top: 14rpx;
+        }
+
+        .publish {
+            width: 20%;
+            color: #fff;
+            font-size: 48rpx;
+            margin-top: 14rpx;
+        }
+    }
+
+    .content {
+        width: 100%;
+
+        // background-color: red;
+        .list1 {
+            .item-input {
+                width: 100%;
+                height: 500rpx;
+                background-color: #FEFEFE;
+
+                textarea {
+                    background-color: #FEFEFE;
+                    border-color: #FEFEFE;
+                    width: 100%;
+                    height: 300rpx;
+                    // margin-top: 2px;
+                    // margin-left: 10px;
+                    // margin-right: 3px;
+                    // padding-top: 10px;
+                    z-index: 0;
+                }
+
+                .operBox {
+                    position: relative;
+                    width: 100%;
+                    height: 110rpx;
+                    display: flex;
+
+                    .photoimg {
+                        position: relative;
+                        left: -40rpx;
+                        margin-left: 100rpx;
+                        width: 100rpx;
+                        background-color: #F9F9F9;
+                        height: 100rpx;
+
+                    }
+
+                    .steprtbox {
+                        width: 60%;
+                        padding-left: 40rpx;
+
+                        .steprItem {
+                            width: 100%;
+                            display: flex;
+                            margin-top: 24rpx;
+                            text {
+                                width: 50%;
+                                text-align: center;
+                                font-size: 28rpx;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .publish {
+        background-color: #07C160;
+        width: 90%;
+        height: 100rpx;
+        margin-left: 5%;
+    }
+}

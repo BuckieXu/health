@@ -1,0 +1,17 @@
+<view class="feedcontainer">
+    <view class="guide" wx:for="{{feedinglist}}" wx:for-item="feedingItem" wx:key="index">
+        <view class="guideTitie">{{feedingItem.main}}</view>
+        <view class="guideItem" wx:for="{{feedingItem.feedingList}}" 
+        wx:key="index"
+        bindtap="goDetail"
+        data-id="{{item.FeedingId}}"
+        style="background-image: url('/static/images/test.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
+            <view class="title">
+                {{item.subhead}}
+            </view>
+            <view class="age">
+                {{item.ageGroup}}月龄
+            </view>
+        </view>
+    </view>
+</view>

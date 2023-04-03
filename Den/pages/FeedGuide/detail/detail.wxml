@@ -1,0 +1,23 @@
+<view class='container'>
+    <image class='head-imagee' src='/static/images/09.jpg'></image>
+    <text class='title'>{{feedinglist.subhead}}</text>
+    <view class='author-date'>
+        <text class='age'>{{feedinglist.ageGroup}}月龄</text>
+        <text class='const-text'>上传于</text>
+        <text class='date'>{{feedinglist.updateTime}}</text>
+    </view>
+    <view class='tool'>
+        <view class='cicle-img'>
+            <image src='/static/images/sc.jpg'></image>
+            <image class='share-img' src='/static/images/fx.jpg'></image>
+        </view>
+        <view class='horizon'></view>
+    </view>
+    <text class='detail' user-select>{{feedinglist.content}}
+    </text>
+    <view class="document">
+        <text class="documentName">本指南内容皆来自于《7-24月龄婴幼儿喂养指南》,如有侵权联系删除</text>
+        <text class="author">作者：杨月欣，苏宜香，汪之顼，赖建强，盛晓阳，崔玉涛，徐秀，曾果，毛丽梅，孙要武</text>
+    </view>
+   
+</view>

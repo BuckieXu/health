@@ -1,0 +1,19 @@
+<view class="VaccineContainer">
+    <van-notice-bar mode="closeable" text="四川省接种参考" />
+   <view class="VaccineCategory">
+       <view style="border-bottom:{{isShow ? '4rpx solid red' : ''}}" bindtap="changeShow" data-show="1">
+       <text>免疫规划疫苗(免费)</text> 
+       </view>
+       <view style="border-bottom:{{isShow ? '' : '4rpx solid red'}}" bindtap="changeShow"  data-show="0">
+       <text>非免疫规划疫苗(自费)</text>
+          
+       </view>
+   </view>
+    <table-view 
+    headers="{{tableHeader}}" 
+    data="{{ row }}" 
+    stripe="{{ stripe }}"
+    border="true">
+    </table-view>
+</view>
+

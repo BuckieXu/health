@@ -1,0 +1,7 @@
+<!--pages/Vaccine/VaccineDetail/VaccineDetail.wxml-->
+<van-cell title="疫苗名称" value="{{vaccineMsg.vaccineName}}" size="large" />
+<van-cell title="所属分类" value="{{vaccineMsg.vaccineGroup}}" size="large" />
+<van-cell title="接种年龄" value="{{vaccineMsg.ageGroup}}月龄" size="large" />
+<van-cell title="剂次" value="第{{vaccineMsg.num}}剂/共{{vaccineMsg.sum}}剂" size="large" />
+
+<van-cell title="疫苗介绍" size="large" label="{{vaccineMsg.include}}" />

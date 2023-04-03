@@ -1,0 +1,17 @@
+<!-- 修改头像 -->
+<!-- <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" /> -->
+<van-cell-group>
+  <van-field
+    value="账号不可更改"
+    label="账号"
+    left-icon="contact"
+    readonly
+    border="{{ false }}"
+  />
+  <van-field
+    value="{{ value }}"
+    placeholder="请输入昵称"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+</van-cell-group>

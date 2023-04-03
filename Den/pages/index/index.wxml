@@ -1,0 +1,178 @@
+<view class="main">
+	<view class="up">
+		<image mode="aspectFill" src="/static/images/Den.png" />
+	</view>
+	<view class="down">
+		<view class="menu card-project">
+			<view bindtap="url" class="item">
+				<view class="item-inner" bindtap="goDiet">
+					<view class="img bg1">
+						<image src="/static/images/menu/board.png" />
+					</view>
+					<view class="title">食谱</view>
+				</view>
+			</view>
+
+			<view class="item">
+				<view class="item-inner" bindtap="gobaike">
+					<view class="img bg2">
+						<image src="/static/images/menu/rule.png" />
+					</view>
+					<view class="title">育儿百科</view>
+				</view>
+			</view>
+
+
+			<view class="item">
+				<view class="item-inner" bindtap="goDiary">
+					<view class="img bg3">
+						<image src="/static/images/menu/wei.png" />
+					</view>
+					<view class="title">宝宝日记</view>
+				</view>
+			</view>
+
+			<view class="item">
+				<view class="item-inner" bindtap="goVaccine">
+					<view class="img bg4">
+						<image src="/static/images/menu/vote.png" />
+					</view>
+					<view class="title">疫苗接种</view>
+				</view>
+			</view>
+
+			<view class="item">
+				<view class="item-inner" bindtap="goFeedGuide">
+					<view class="img bg-orange">
+						<image src="/static/images/menu/repair.png" />
+					</view>
+					<view class="title">喂养指南</view>
+				</view>
+			</view>
+
+			<view  class="item">
+				<view class="item-inner" bindtap="goExercise">
+					<view class="img bg-pink">
+						<image src="/static/images/menu/activity.png" />
+					</view>
+					<view class="title">身体锻炼</view>
+				</view>
+			</view>
+
+			<view class="item">
+				<view class="item-inner" bindtap="goStory">
+					<view class="img bg-grey">
+						<image src="/static/images/menu/home.png" />
+					</view>
+					<view class="title">睡前故事</view>
+				</view>
+			</view>
+			<view class="item">
+				<view class="item-inner" bindtap="goMy">
+					<view class="img bg-brown">
+						<image src="/static/images/menu/my.png" />
+					</view>
+					<view class="title">个人中心</view>
+				</view>
+			</view>
+
+
+		</view>
+
+		<view wx:if="{{!isLogin}}" class="authen"><text class="icon-safe margin-right-xs"></text>您尚未登录，点此快速进行登录注册</view>
+
+		<view class="board">
+			<view class="left">
+				<image mode="heightFix" src="/static/images/home/board.png" />
+			</view>
+			<view class="mid">
+				<view class="line content-cut-one">2022年春节，物业温馨提醒</view>
+				<view class="line content-cut-one">2022年度物业收支公司</view> 
+
+			</view>
+			<view class="right"><text class="icon-right"></text></view>
+		</view>
+
+		<view class="cute">
+			<view class="item" bindtap="url" >
+				<image class="loading" src="/static/images/1.png" mode="aspectFill" />
+			</view>
+			<view class="item">
+				<image class="loading" src="/static/images/2.png" mode="aspectFill" />
+			</view>
+			<view class="item">
+				<image class="loading" src="/static/images/3.png" mode="aspectFill" />
+			</view>
+			<button class="item ">
+				<image class="loading" src="/static/images/4.png" mode="aspectFill" />
+			</button>
+		</view>
+	</view>
+	<!--新闻模块 start-->
+	<block>
+		<view class="block-title mt20">
+			<view class="title-box" bindtap="gobaike">
+				<view class="title-box-l"><text>育儿百科</text></view>
+				<view class="title-box-r"><text>更多</text><text class="iconfont icon-youjiantou"></text></view>
+			</view>
+		</view>
+		<view class="block-newsList">
+			<view class="news-item" wx:for="{{knowledge}}" wx:key="index" data-id="{{item.ChildKnowledgeId}}" bindtap="gobaikeDetail">
+				<view class="news-item-l">
+					<image src="/static/images/test.jpg"></image>
+				</view>
+				<view class="news-item-r">
+					<view class="title">{{item.title}}</view>
+					<view class="desc">{{item.content}}</view>
+					<view class="-time">
+                    <text class="iconfont icon-shijian"></text>
+                    <text class="publishtime">{{item.create_time}}</text>
+                    </view>
+				</view>
+			</view>
+		</view>
+	</block>
+	<!--新闻模块 end-->
+
+	<!--案例模块 start-->
+	<block>
+		<view class="block-title mt20">
+			<view class="title-box">
+				<view class="title-box-l"><text>睡前故事</text></view>
+				<view class="title-box-r"><text>更多</text><text class="iconfont icon-youjiantou"></text></view>
+			</view>
+		</view>
+		<view class="block-proList">
+			<view class="pro-item" wx:for="{{playlists}}" wx:key="index" bindtap="goPlaylist" data-id="{{item.id}}">
+				<view class="img">
+					<image src="{{item.coverImgUrl}}"></image>
+				</view>
+				<view class="title">{{item.name}}</view>
+			</view>
+		</view>
+	</block>
+	<!--案例模块 end-->
+
+	<!--联系我们 start-->
+	<view class="block-title mt20">
+		<view class="title-box">
+			<view class="title-box-l"><text>联系我们</text></view>
+		</view>
+	</view>
+	<view class="block-contact mb20">
+		<view class="contact-item">
+			<view class="contact-item-l"><text class="iconfont icon-renyuan"></text></view>
+			<view class="contact-item-r">德恩</view>
+		</view>
+		<view class="contact-item">
+			<view class="contact-item-l"><text class="iconfont icon-tel"></text></view>
+			<view class="contact-item-r">1070447668@qq.com</view>
+		</view>
+		<view class="contact-item">
+			<view class="contact-item-l"><text class="iconfont icon-dingwei"></text></view>
+			<view class="contact-item-r">四川省西昌市</view>
+		</view>
+	</view>
+  <view style=" height: 40rpx;display: block; "></view>
+	<!--联系我们 end-->
+</view>

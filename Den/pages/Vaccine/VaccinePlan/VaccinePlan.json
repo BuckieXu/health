@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "van-steps": "/miniprogram_npm/@vant/weapp/steps/index",
+        "van-cell": "/miniprogram_npm/@vant/weapp/cell/index",
+        "van-cell-group": "/miniprogram_npm/@vant/weapp/cell-group/index",
+        "van-checkbox": "/miniprogram_npm/@vant/weapp/checkbox/index",
+        "van-checkbox-group": "/miniprogram_npm/@vant/weapp/checkbox-group/index",
+        "van-empty": "@vant/weapp/empty/index"
+    },
+    "navigationBarTitleText": "接种规划"
+}

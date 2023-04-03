@@ -1,0 +1,4 @@
+<articleItem wx:for="{{DietList}}" wx:key="index" wx:for-item="Diet" Diet="{{Diet}}"></articleItem>
+
+
+

@@ -1,0 +1,126 @@
+.DietDetailContainer {
+    width: 100%;
+    height: 100%;
+
+    .DietDetailImgBox {
+        width: 100%;
+        height: 400rpx;
+
+        .DietDetailImg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .DietDetailContent {
+        background-color: #D5E0E8;
+        width: 100%;
+        box-sizing:border-box;
+        padding: 18rpx;
+        .FirstBox {
+            background-color: #FEFEFE;
+            width: 100%;
+            height: 200rpx;
+            border-radius: 10rpx;
+
+            .dietName {
+                width: 90%;
+                margin-left: 5%;
+                font-size: 36rpx;
+                text-align: center;
+                border-bottom: 2rpx solid #777777;
+            }
+
+            .describe {
+                width: 100%;
+                text-align: center;
+
+                .describetitle {
+                    font-size: 32rpx;
+                }
+
+                .describemsg {
+                    width: 90%;
+                    margin-left: 4%;
+                    font-size: 26rpx;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+
+                }
+            }
+
+        }
+        .tags{
+            box-sizing: border-box;
+            background-color: #FEFEFE;
+            width: 100%;
+            height: 120rpx;
+            border-radius: 10rpx;
+            margin-top: 20rpx;
+            .tagstitle{
+                font-size: 32rpx;
+                width: 90%;
+                margin-left: 5%;
+                text-align: center;
+                border-bottom: 2rpx solid #777777;
+            }
+            .tagslist{
+                margin-top: 10rpx;
+                width: 60%;
+                margin-left: 20%;
+                display: flex;
+                justify-content: space-around;
+                .tag{
+                    width: 120rpx;
+                    height: 50rpx;
+                    border-radius:10rpx;
+                    font-size: 24rpx;
+                    text-align: center;
+                    line-height: 50rpx;
+                    border: 2rpx solid #777777;
+                }
+            }
+        }
+        // 食材信息
+        .foodMaterical{
+            background-color: #FEFEFE;
+            width: 100%;
+            border-radius: 10rpx;
+            margin-top: 20rpx;
+            .Materical{
+                width: 90%;
+                margin-left: 5%;
+                font-size: 36rpx;
+                text-align: center;
+                border-bottom: 2rpx solid #777777;
+            }
+            .MatericalItem{
+                width: 90%;
+                height: 50rpx;
+                line-height: 50rpx;
+                margin-left: 5%;
+                font-size: 24rpx;
+                text-align: center;
+                border-bottom: 2rpx solid #777777;
+            }
+        }
+        .foodMaterical:last-child{
+            border-bottom:none
+        }
+        .steps{
+            background-color: #FEFEFE;
+            width: 100%;
+            margin-top: 20rpx;
+            .stepstitle{
+                width: 90%;
+                margin-left: 5%;
+                font-size: 36rpx;
+                text-align: center;
+                border-bottom: 2rpx solid #777777;
+            }
+        }
+    }
+}

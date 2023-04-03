@@ -1,0 +1,21 @@
+<!-- 宝宝日记页面 -->
+<view class="diarycontainer" wx:if="{{BabyDiaryList}}">
+    <!-- 归档 -->
+    <view class="diaryitem" wx:for="{{BabyDiaryList}}" wx:key="index">
+        <text class="datetime">{{item.create_time}}</text>
+        <view class="content">
+            <view class="event">
+                {{item.eventName}}
+            </view>
+            <view class="discrible">
+                <image src="{{item.diary_url}}" mode=""/>
+            </view>
+        </view>
+        
+    </view>
+</view>
+<view class="diaryitem" wx:else>
+    <van-empty description="还未登录">
+  <van-button round type="primary" custom-class="bottom-button" bindtap="toLogin">前往登录</van-button>
+</van-empty>
+</view>

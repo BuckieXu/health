@@ -1,0 +1,78 @@
+<view class="MyContainer">
+    <!-- 用户信息区域 -->
+    <!-- 已经登录 -->
+    <view class="MyMsg" bindtap="changeMsg" wx:if="{{userInfo}}">
+        <view class="Pic">
+            <image src="{{userInfo.avatarUrl}}" mode="" />
+        </view>
+        <view class="content">
+            <text class="userName">{{userInfo.nickName}}</text>
+            <text>点击编辑信息</text>
+        </view>
+        <view class="msgarrow">
+            <text class="iconfont icon-youjiantou " />
+        </view>
+
+    </view>
+    <!-- 没有登录 -->
+    <view class="MyMsg" wx:else bindtap="toLogin">
+        <view class="Pic">
+            <image src="https://thirdwx.qlogo.cn/mmopen/vi_32/POgEwh4mIHO4nibH0KlMECNjjGxQUq24ZEaGT4poC6icRiccVGKSyXwibcPq4BWmiaIGuG1icwxaQX6grC9VemZoJ8rg/132" mode="" />
+        </view>
+        <view class="content">
+            <text class="toLogin">点击登录</text>
+        </view>
+        <view class="msgarrow">
+            <text class="iconfont icon-youjiantou " />
+        </view>
+    </view>
+    <!-- 操作部分 -->
+    <view class="operation" wx:if="{{userInfo}}">
+        <view class="operationbaby" wx:for="{{babyMsg}}" wx:for-item="baby" wx:key="index" data-num="{{index}}" bindtap="changeSelect" style="background-color: {{num==index?'#0FB53A':''}};">
+            <!-- 下面图标设置为24px -->
+            <image class="babyimg" src="{{baby.pic_url}}" mode=""/>
+            <text>{{baby.nickname}}</text>
+        </view>
+        <view class="operation1" wx:for="{{3-babyMsg.length}}" wx:key="index">
+            <text class="iconfont icon-tianjiajiahaoyoutianjiapengyou" />
+            <text class="addbaby" bindtap="addbaby">添加宝宝</text>
+        </view>
+    </view>
+    <!-- 其他操作 -->
+    <view class="qita">
+        <view class="qitaItem">
+            <text class="ItemTitle" bindtap="gobaike">育儿百科</text>
+            <text class="iconfont icon-youjiantou " />
+        </view>
+        <view class="qitaItem" bindtap="goDiary">
+            <text class="ItemTitle">宝宝日记</text>
+            <text class="iconfont icon-youjiantou " />
+        </view>
+        <view class="qitaItem">
+            <text class="ItemTitle">体检信息</text>
+            <text class="iconfont icon-youjiantou " />
+        </view>
+    </view>
+    <view class="qita">
+        <view class="qitaItem">
+            <text class="ItemTitle">婴幼儿喂养指南</text>
+            <text class="iconfont icon-youjiantou " />
+        </view>
+        <view class="qitaItem" >
+            <text class="ItemTitle">宝宝日记</text>
+            <text class="iconfont icon-youjiantou " />
+        </view>
+    </view>
+    <view class="qita">
+        <view class="qitaItem">
+            <text class="ItemTitle">关于我们</text>
+            <text class="iconfont icon-youjiantou " />
+        </view>
+        <view class="qitaItem" >
+            <text class="ItemTitle">设置</text>
+            <text class="iconfont icon-youjiantou " />
+        </view>
+    </view>
+    <view class="exit" bindtap="exit" wx:if="{{userInfo}}">退出登录</view>
+    <view class="login" bindtap="toLogin" wx:else="">点击登录</view>
+</view>

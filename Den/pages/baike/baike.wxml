@@ -1,0 +1,25 @@
+<view class="baikeContainer">
+    <!-- 头部导航栏 -->
+    <view class="flex nav">
+        <view class="nav-item  {{index==current?'text-selected current':''}}" wx:for="{{tabs}}" wx:key="index" bindtap="tabSelect" data-id="{{index}}">
+            {{item}}
+        </view>
+    </view>
+    <view class="treeselect">
+        <van-tree-select items="{{ abc }}" height="55vw" main-active-index="{{ mainActiveIndex }}" active-id="{{ activeId }}" bind:click-nav="onClickNav" bind:click-item="onClickItem" height="550">
+            <view slot="content" class="articleItem" wx:for="{{childknowledge[mainActiveIndex].knowledgeList}}" bindtap="goDetail" wx:key="index" data-id="{{item.ChildKnowledgeId}}">
+                <view class="articleimg">
+                    <image src="/static/images/test.jpg" mode=""/>
+                </view>
+                <view class="article">
+                    <view class="articlename">
+                        {{item.title}}
+                    </view>
+                    <view class="articelcontent">
+                        {{item.content}}
+                    </view>
+                </view>
+           </view>
+        </van-tree-select>
+    </view>
+</view>

@@ -1,0 +1,41 @@
+<view class="page-feel">
+    <!-- <view class="navbar">
+        <van-icon name="close" class="closebtn" bindtap="returnPage"/>
+        <view class="bartext">发布</view>
+        <van-icon name="guide-o" class="publish"></van-icon>
+    </view> -->
+    <view class="content">
+        <view class="list1">
+            <view class="item item-input">
+                <textarea placeholder="分享孩子的美好瞬间" bindinput="getTextareaValue"></textarea>
+                <!-- <van-image custom-class="photoimg" width="100" height="100" src="/static/images/相机.png" /> -->
+                <view class="operBox">
+                    <van-uploader custom-class="photoimg" preview-image="true" preview-full-image="true" width="100" height="100" accept="image" max-count="1" bind:delete="deleteClick" file-list="{{ fileList }}" bind:after-read="afterRead" />
+                    <view class="steprtbox">
+                        <view class="steprItem">
+                            <text>请选择身高(CM)</text>
+                            <van-stepper value="{{ height }}" integer
+                            data-tag="height"
+                            min='20'
+                            bind:plus="addvalue"
+                            bind:minus="minusvalue"
+                             bind:change="onChange" />
+                        </view>
+                        <view class="steprItem">
+                            <text>请选择体重(KG)</text>
+                            <van-stepper value="{{ weight }}" integer
+                            data-tag="weight"
+                            min='3'
+                            bind:plus="addvalue"
+                            bind:minus="minusvalue"
+                            bind:change="onChange" />
+                        </view>
+
+                    </view>
+                </view>
+
+            </view>
+        </view>
+    </view>
+    <van-button disabled="{{describe?false:true}}" type="primary" custom-class="publish" bind:click="publishDiary">{{describe?'上传日记':'请书写内容'}}</van-button>
+</view>

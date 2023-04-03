@@ -1,0 +1,136 @@
+/* pages/My/My.wxss */
+.MyContainer {
+    width: 100%;
+    height: 100vh;
+    background-color: #f6f6fc;
+}
+
+/* 我的信息模块 */
+.MyMsg {
+    padding: 10rpx 20rpx;
+    width: 100%;
+    display: flex;
+    height: 120rpx;
+    /* background-color: red; */
+    padding-top: 10rpx;
+    background-color: #fff;
+
+}
+
+.Pic {
+    width: 20%;
+    height: 100%;
+
+}
+
+.Pic image {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.userName {
+    font-size: 18px;
+    font-weight: 500;
+}
+.toLogin{
+    font-size: 30rpx;
+    height: 100%;
+    line-height: 80rpx;
+
+}
+.msgarrow {
+    width: 60rpx;
+    height: 100%;
+    text-align: center;
+    line-height: 120rpx;
+    margin-right: 56rpx;
+    /* background-color: red; */
+}
+
+/* 操作模块 */
+.operation {
+    background-color: #fff;
+    width: 100%;
+    height: 120rpx;
+    /* background-color: red; */
+    display: flex;
+}
+
+.operation1 {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.operationbaby {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.babyimg {
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 50%;
+}
+
+.addbaby {
+    margin-top: 10rpx;
+}
+
+/* 其他模块 */
+.qita {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+
+.qitaItem {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 0 30rpx;
+    display: flex;
+}
+
+.ItemTitle {
+    width: 85%;
+}
+.login{
+    width: 80%;
+    margin-left: 10%;
+    height: 60rpx;
+    color: white;
+    text-align: center;
+    line-height: 60rpx;
+    border-radius: 8rpx;
+    background-color: #0FB53A;
+    margin-top: 20rpx;
+}
+.exit {
+    width: 80%;
+    margin-left: 10%;
+    height: 60rpx;
+    color: white;
+    text-align: center;
+    line-height: 60rpx;
+    border-radius: 8rpx;
+    background-color: red;
+    margin-top: 20rpx;
+} 

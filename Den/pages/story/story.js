@@ -1,0 +1,83 @@
+import request from '../../utils/request'
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    playlists:[],
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad(options) {
+    this.getPlaylist()
+  },
+  // 通过导航的值获取歌曲分类详细列表
+   getPlaylist(){
+     wx.request({
+       url: 'http://localhost:3000/search?keywords='+"睡前故事"+'&&type='+'1000',
+       success:(res)=>{
+           this.setData({
+            playlists:res.data.result.playlists
+           })
+       }
+     })
+  },
+  // 去歌曲详情页
+  goPlaylist(event){
+    let id=event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: './playlist/playlist?id='+id,
+    })
+  },
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload() {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh() {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom() {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage() {
+
+  }
+})

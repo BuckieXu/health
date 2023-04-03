@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "van-image": "@vant/weapp/image/index",
+        "van-stepper": "@vant/weapp/stepper/index"
+    },
+    "navigationBarTitleText": "日记描述"
+    
+}

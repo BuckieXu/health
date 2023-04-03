@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "table-view": "/miniprogram_npm/miniprogram-table-component"
+        
+    },
+    "navigationBarTitleText": "接种参考"
+}

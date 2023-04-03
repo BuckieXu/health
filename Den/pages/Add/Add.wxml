@@ -1,0 +1,21 @@
+<!--pages/Add/Add.wxml-->
+<view class="addContainer">
+    <view class="iconbox">
+        <view class="iconItem" bindtap="addDiary">
+            <image src="/static/images/日记本.png" mode="" />
+            <text>添加日记</text>
+        </view>
+        <view class="iconItem">
+            <image src="/static/images/日记本.png" mode="" />
+            <text>添加照片</text>
+        </view>
+        <view class="iconItem">
+            <image src="/static/images/日记本.png" mode="" />
+            <text>添加视频</text>
+        </view>
+        <view class="iconItem">
+            <image src="/static/images/日记本.png" mode="" />
+            <text>添加文章</text>
+        </view>
+    </view>
+</view>

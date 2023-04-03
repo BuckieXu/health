@@ -1,0 +1,52 @@
+/* 辅食页面 */
+.ComplementContainer{
+    width: 100%;
+    height: 100vh;
+    background-color: #f6f6fc;
+}
+.categoryNameItem{
+    width: 100%;
+    background-color: #fff;
+    margin-top: 20rpx;
+
+}
+.title{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: #edd828;
+    font:lighter;
+}
+.categorieslist{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    padding-bottom: 40rpx;
+}
+.ItemName{
+    width: 25%;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    margin-top: 20rpx;
+    background-color: #b9e9ba;
+    border-radius: 10rpx;
+    margin-left: 40rpx;
+}
+/* 功效及下面 */
+.ListItem{
+    width: 30%;
+    background-color: #fff;
+    margin-top: 20rpx;
+    display: flex;
+    margin-left: 20rpx;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    
+}
+.ListItem image{
+    width: 80rpx;
+    height: 80rpx;
+}

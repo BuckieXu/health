@@ -1,0 +1,32 @@
+<!-- 辅食页面 -->
+<view class="ComplementContainer">
+    <view class="categoryNameItem">
+        <view class="title">
+            ---月龄---
+        </view>
+        <view class="categorieslist">
+            <view class="ItemName" bindtap="toDietList" data-ageGroup="6">6个月</view>
+            <view class="ItemName" bindtap="toDietList" data-ageGroup="7-9">7-9个月</view>
+            <view class="ItemName" bindtap="toDietList" data-ageGroup="10">10个月</view>
+            <view class="ItemName" bindtap="toDietList" data-ageGroup="11">11个月</view>
+            <view class="ItemName" bindtap="toDietList" data-ageGroup="12">12个月</view>
+            <view class="ItemName" bindtap="toDietList" data-ageGroup="18">1-2岁</view>
+            <view class="ItemName" bindtap="toDietList" data-ageGroup="24">2-3岁</view>
+            <view class="ItemName" bindtap="toDietList" data-ageGroup="36">3岁以上</view>
+
+        </view>
+    </view>
+    <view class="categoryNameItem" wx:for="{{categorylist}}" wx:for-item="category" wx:key="index">
+        <view class="title" >
+        --
+         {{category.categoryname}}
+         --
+        </view>
+        <view class="categorieslist">
+            <view class="ListItem" wx:for="{{category.list}}" wx:key="index" wx:for-item="lists"  bindtap="toDietList" data-id="{{category.id}}" data-foodclass="{{lists.categoryItem}}">
+                <image src="{{logo[lists.num]}}" mode="" />
+                <text>{{lists.categoryItem}}</text>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+<view class="selecteventContainer">
+    <input type="text" class="inputEvent" value="{{eventName}}" placeholder="请输入事件" bindinput="getInputValue" />
+    <view class="btnBox">
+        <van-button  custom-class="btn" type="default" wx:for="{{eventList}}" wx:key="index" bindtap="changeTag" data-eventname="{{item}}">{{item}}</van-button>
+    </view>
+    <van-button  disabled ="{{eventName?false:true}}" custom-class="submitbtn" type="success" bind:click="GolastOne">{{eventName?'下一步':'请选择事件'}}</van-button>
+</view>

@@ -1,0 +1,18 @@
+<view class='container'>
+    <image class='head-imagee' src='/static/images/09.jpg'></image>
+    <text class='title'>{{ChildKnowledge.title}}</text>
+    <view class='author-date'>
+        <text class='age'>{{ChildKnowledge.ageGroup}}月龄</text>
+        <text class='const-text'>上传于</text>
+        <text class='date'>{{ChildKnowledge.create_time}}</text>
+    </view>
+    <view class='tool'>
+        <view class='cicle-img'>
+            <image src='/static/images/sc.jpg'></image>
+            <image class='share-img' src='/static/images/fx.jpg'></image>
+        </view>
+        <view class='horizon'></view>
+    </view>
+    <text class='detail' user-select>{{ChildKnowledge.content}}
+    </text>  
+</view>

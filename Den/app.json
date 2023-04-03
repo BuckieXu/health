@@ -1,0 +1,88 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/Add/Add",
+        "pages/Diary/diary",
+        "pages/ComplementFood/Complement",
+        "pages/Vaccine/Vaccine",
+        "pages/My/My",
+        "pages/Login/Login",
+        "pages/ArticleList/articlelist",
+        "pages/Vaccine/VaccineDetail/VaccineDetail",
+        "pages/ComplementFood/DietDetail/DietDetail",
+        "pages/Vaccine/VaccineReference/VaccineRefeeence",
+        "pages/Vaccine/VaccinePlan/VaccinePlan",
+        "pages/My/ChangeMsg/ChangeMsg",
+        "pages/Add/AddDiary/AddDiary",
+        "pages/Add/AddDiary/DiaryDescribe/DiaryDescribe",
+        "pages/Login/wxLogin/wxLogin",
+        "pages/baike/baike",
+        "pages/story/story",
+        "pages/story/playlist/playlist",
+        "pages/story/songdetail/songdetail",
+        "pages/FeedGuide/FeedGuide",
+        "pages/FeedGuide/detail/detail",
+        "pages/exercise/detail/detail",
+        "pages/baike/detail/detail",
+        "pages/exercise/exercise"
+    ],
+    "tabBar": {
+        "selectedColor": "#31869B",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "selectedIconPath": "/static/images/tabbar/service_cur.png",
+                "iconPath": "/static/images/tabbar/service.png"
+            },
+            {
+                "pagePath": "pages/ComplementFood/Complement",
+                "text": "辅食",
+                "selectedIconPath": "/static/images/tabbar/diet_cur.png",
+                "iconPath": "/static/images/tabbar/diet.png"
+            },
+            {
+                "pagePath": "pages/Add/Add",
+                "text": "记录",
+                "selectedIconPath": "/static/images/tabbar/jia_cur.png",
+                "iconPath": "/static/images/tabbar/jia.png"
+            },
+            {
+                "pagePath": "pages/Vaccine/Vaccine",
+                "text": "接种",
+                "selectedIconPath": "/static/images/tabbar/jiezhong_cur.png",
+                "iconPath": "/static/images/tabbar/jiezhong.png"
+            },
+            {
+                "pagePath": "pages/My/My",
+                "text": "我的",
+                "selectedIconPath": "/static/images/tabbar/my_cur.png",
+                "iconPath": "/static/images/tabbar/my.png"
+            }
+        ]
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#0fb53a",
+        "navigationBarTitleText": "德恩育儿",
+        "navigationBarTextStyle": "white"
+    },
+    "requiredBackgroundModes": [
+        "audio"
+    ],
+    "usingComponents": {
+        "articleItem": "/components/articleItem/articleItem",
+        "van-notice-bar": "@vant/weapp/notice-bar/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index",
+        "van-radio": "@vant/weapp/radio/index",
+        "van-radio-group": "@vant/weapp/radio-group/index",
+        "van-field": "@vant/weapp/field/index",
+        "van-popup": "@vant/weapp/popup/index",
+        "van-button": "@vant/weapp/button/index",
+        "van-steps": "@vant/weapp/steps/index",
+        "van-icon": "@vant/weapp//icon/index",
+        "van-uploader": "@vant/weapp/uploader/index"
+    },
+    "sitemapLocation": "sitemap.json"
+}

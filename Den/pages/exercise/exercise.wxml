@@ -1,0 +1,25 @@
+<view class="exerciseContainer">
+    <!-- 下拉选择框 -->
+    <van-dropdown-menu>
+  <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="changevalue1"/>
+  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" bind:change="changevalue2"/>
+</van-dropdown-menu>
+
+    <!-- 文章列表 -->
+    <view class="articleItemContainer" wx:if="{{!isshow}}" wx:for="{{exerciselist}}" wx:key="index" data-id="{{item.exerciseid}}" bindtap="goDetail">
+        <!-- 左侧图片 -->
+        <view class="articleImgCon">
+            <image class="articleImg" src="/static/images/test.jpg" mode="" />
+        </view>
+        <view class="content">
+            <text class="articleName" bindtap="goDietDetail">{{item.exerciseName}}</text>
+            <text class="describe">{{item.describe}}</text>
+            <view>
+                <text class="PubMsg">{{item.exerciseClass}}</text>
+                <text class="PubMsg">{{item.ageGroup}}月龄</text>
+            </view>
+        </view>
+    </view>
+    <van-empty image="error" description="没有结果" wx:if="{{isshow}}"/>
+
+</view>
